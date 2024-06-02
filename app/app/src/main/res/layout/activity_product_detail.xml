@@ -7,12 +7,23 @@
     tools:context=".ui.details.ProductDetailActivity">
 
     <ImageView
+        android:id="@+id/catalogueBackgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_catalogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
         android:id="@+id/imageViewDetail"
-        android:layout_width="366dp"
-        android:layout_height="168dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="396dp"
+        android:layout_height="176dp"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,8 +37,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:textSize="24sp"
+        android:textSize="45sp"
         android:text="Loading..."
+        android:fontFamily="@font/poetsen_one_regular"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,27 +48,29 @@
 
     <TextView
         android:id="@+id/textViewDetailDescription"
-        android:layout_width="369dp"
-        android:layout_height="165dp"
+        android:layout_width="363dp"
+        android:layout_height="124dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
-        android:textSize="24sp"
         android:text="Loading..."
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailName" />
 
-    <EditText
-        android:id="@+id/editNumberDetailAmount"
+    <Button
+        android:id="@+id/buttonDetailMinus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textSize="24sp"
-        android:text="1"
+        android:background="@color/red"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailDescription" />
 
@@ -63,11 +78,53 @@
         android:id="@+id/buttonDetailAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Add"
+        android:background="@color/blue"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.933"
-        app:layout_constraintStart_toEndOf="@+id/editNumberDetailAmount"
-        app:layout_constraintTop_toTopOf="@+id/editNumberDetailAmount" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailDescription" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="199dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/editNumberDetailAmount"
+        app:layout_constraintEnd_toEndOf="@+id/editNumberDetailAmount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editNumberDetailAmount"
+        app:layout_constraintTop_toTopOf="@+id/editNumberDetailAmount"
+        app:layout_constraintVertical_bias="0.0">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editNumberDetailAmount"
+        android:layout_width="164dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:hint="1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDetailAdd"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toEndOf="@+id/buttonDetailMinus"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailDescription" />
+
+    <TextView
+        android:id="@+id/productDetailSubTotalTextView"
+        android:layout_width="191dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="$200"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNumberDetailAmount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

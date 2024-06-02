@@ -1,35 +1,39 @@
 package com.ar.enbaldeapp.services;
 
-import com.google.gson.Gson;
+import com.ar.enbaldeapp.models.utilities.JsonUtilities;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
+import java.lang.reflect.Type;
+import java.util.List;
+
 public class ApiResponse<T> {
-    private final String jsonText;
     private final String message;
-    private final T data;
+    private final Object data;
     private final int status;
 
-    public ApiResponse(String jsonText, boolean isJson) {
-        if (isJson) {
-            this.jsonText = jsonText;
-            ServerApiResponse<T> response = new Gson().fromJson(jsonText, ServerApiResponse.class);
-            this.message = response.getMessage();
-            this.data = response.getData();
-            this.status = response.getStatus();
-        }
-        else {
-            this.jsonText = "";
-            this.message = jsonText;
-            this.data = null;
-            this.status = 0;
-        }
+    public ApiResponse(String jsonText) {
+        ServerApiResponse response = JsonUtilities.getConfiguredGson().fromJson(jsonText, ServerApiResponse.class);
+        this.message = response.getMessage();
+        this.data = response.getData();
+        this.status = response.getStatus();
     }
 
-    public T castResponseAs(Class<T> typeParameterClass)
-    {
-        JsonObject object = new Gson().toJsonTree(this.data).getAsJsonObject();
-        return new Gson().fromJson(object, typeParameterClass);
+    public T castResponseAs(Class<T> typeParameterClass) {
+        JsonObject object = JsonUtilities.getConfiguredGson().toJsonTree(this.data).getAsJsonObject();
+        return JsonUtilities.getConfiguredGson().fromJson(object, typeParameterClass);
+    }
+
+    public List<T> castResponseAsListOf(Type type) {
+        JsonArray object = JsonUtilities.getConfiguredGson().toJsonTree(this.data).getAsJsonArray();
+        return JsonUtilities.getConfiguredGson().fromJson(object, type);
     }
 
     public String getMessage() { return message; }
+
+    public int getStatus() { return this.status; }
+
+    public Object getRawData() {
+        return this.data;
+    }
 }

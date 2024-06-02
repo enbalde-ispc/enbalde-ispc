@@ -6,14 +6,69 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="profile">Profile</string>
-    <!-- Strings related to login -->
+    <!-- Strings related to login & signup-->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="action_sign_up">Registrarse</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
+    <string name="welcome">"Bienvenid@!"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="logout">Logout</string>
+    <string name="prompt_username">Usuario</string>
+    <string name="prompt_fname">Nombre</string>
+    <string name="prompt_lname">Apellido</string>
+    <string name="prompt_address">Direccion</string>
+    <string name="prompt_phone">Numero de teléfono</string>
+    <string name="new_user">Quiero registrarme</string>
+    <string name="prompt_registered_user">Ya tengo una cuenta</string>
+    <string name="admin_login_not_allowed">No puedes iniciar sesión como administrador</string>
+    <string name="description">Descripción</string>
+    <string name="our_ice_creams">Nuestros helados</string>
+    <string name="order">Su Pedido</string>
+    <string name="content">texto de pedido</string>
+    <string name="content_image">imagen de helado</string>
+    <string name="content_price">Precio del helado</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="pagar">Pagar</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="checkin">Registrarse</string>
+    <string name="forgot_password">Si no puede recordar su clave ingrese su e-mail a continuación para recibir un token para cambiarla.</string>
+    <string name="enter_your_email">Ingrese su correo</string>
+    <string name="text_text">Le enviaremos un mensaje para reestablecer su nueva contraseña.</string>
+    <string name="Botton_1">Enviar código</string>
+    <string name="Pay">Pagar</string>
+    <string name="Total_to_pay">Pagar</string>
+    <string name="Money">1500</string>
+    <string name="payment_method">Por favor seleccione a continuación un método de pago</string>
+    <string name="payment_method_1">MÉTODOS DE PAGO</string>
+    <string name="tarjet1">Tarjeta de Crédito</string>
+    <string name="tarjeta2">Transferencia</string>
+    <string name="pay_1">PAGO</string>
+    <string name="efective">Efectivo</string>
+    <string name="reset_password">Cambiar clave</string>
+    <string name="my_profile">Mi perfil</string>
+    <string name="my_orders">Mis ordenes</string>
+    <string name="notification">Notificaciones</string>
+    <string name="save">Guardar</string>
+    <string name="content_logo">Logo</string>
+    <string name="forgot_password2">Olvidé mi clave</string>
+    <string name="new_password">Nueva Clave</string>
+    <string name="send_me_a_token">Send me a token</string>
+    <string name="token_and_new_password">"A continuación ingrese el token que recibió por correo y la nueva clave que desea usar."</string>
+    <string name="token">Token</string>
+    <string name="content_image2">Content Imagen</string>
+    <string name="recoverToken_contentDescription">Recover Token</string>
+    <string name="recoverEmail">Recuperar Email</string>
+    <string name="recoverToken">Recuperar Token</string>
+    <string name="recoverPassword">Recuperar contraseña</string>
+    <string name="recover_password_hint">Enter your new password</string>
+    <string name="recover_email_hint">Enter your email address</string>
+    <string name="recovery_token_hint">Enter your recovery token</string>
+
+
+
+
 </resources>

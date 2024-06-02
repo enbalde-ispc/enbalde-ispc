@@ -6,7 +6,7 @@ public class TokenResponse {
     @SerializedName("acceso")
     private String access;
 
-    @SerializedName("refresh")
+    @SerializedName("refresco")
     private String refresh;
 
     public String getAccess() {

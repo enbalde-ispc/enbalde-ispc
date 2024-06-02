@@ -1,8 +1,12 @@
 package com.ar.enbaldeapp.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class ShippingMethod {
     private final long id;
+    @SerializedName("nombre")
     private final String name;
+    @SerializedName("monto")
     private final double cost;
 
     public ShippingMethod(long id, String name, double cost) {

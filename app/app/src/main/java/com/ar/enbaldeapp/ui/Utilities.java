@@ -25,6 +25,10 @@ public class Utilities {
         changeBottomMenuTo(view, "Registration");
     }
 
+    public static void changeBottomMenuToRecover(View view) {
+        changeBottomMenuTo(view, "Recovery");
+    }
+
     private static void changeBottomMenuTo(View view, String text) {
         BottomNavigationView bottomNavigationView = view.getRootView().findViewById(R.id.nav_view);
         Menu menu = bottomNavigationView.getMenu();
@@ -36,6 +40,14 @@ public class Utilities {
         BottomNavigationView bottomNavigationView = view.getRootView().findViewById(R.id.nav_view);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem item = menu.findItem(R.id.navigation_cart);
+        item.setEnabled(true);
+        item.setVisible(true);
+    }
+
+    public static void showPreviousOrdersMenuItem(View view) {
+        BottomNavigationView bottomNavigationView = view.getRootView().findViewById(R.id.nav_view);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem item = menu.findItem(R.id.navigation_history);
         item.setEnabled(true);
         item.setVisible(true);
     }
@@ -67,5 +79,9 @@ public class Utilities {
 
     public static void changeToolbarTitleToRegistration(Activity activity) {
         changeToolbarTitleTo(activity, "Registration");
+    }
+
+    public static void changeToolbarTitleToRecovery(Activity activity) {
+        changeToolbarTitleTo(activity, "Recover Password");
     }
 }

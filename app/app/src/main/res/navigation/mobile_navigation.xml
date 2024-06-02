@@ -23,6 +23,12 @@
         android:label="@string/title_cart"
         tools:layout="@layout/fragment_cart" />
 
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.ar.enbaldeapp.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+
     <!-- label es Login para que por defecto el toolbar diga login -->
     <fragment
         android:id="@+id/navigation_user"

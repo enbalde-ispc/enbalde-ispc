@@ -9,7 +9,7 @@ public class UserToken {
     @SerializedName("usuarioActual")
     private User user;
     @SerializedName("carritoActual")
-    private int cartId;
+    private long cartId;
 
     public void setUser(User user) {
         this.user = user;
@@ -19,11 +19,11 @@ public class UserToken {
         return this.user;
     }
 
-    public void setCartId(int cartId) {
+    public void setCartId(long cartId) {
         this.cartId = cartId;
     }
 
-    public int getCartId() {
+    public long getCartId() {
         return this.cartId;
     }
 

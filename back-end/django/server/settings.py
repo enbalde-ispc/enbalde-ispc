@@ -85,7 +85,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'enbalde',
-        'USER': 'root',
+        'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',

@@ -18,7 +18,14 @@
             app:enterAnim="@android:anim/fade_in"
             app:exitAnim="@android:anim/fade_out"
             app:destination="@id/navigation_profile_fragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_recoverFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:destination="@+id/navigation_recovery_fragment" />
+
     </fragment>
+
     <fragment
         android:id="@+id/navigation_registration_fragment"
         android:name="com.ar.enbaldeapp.ui.register.RegisterFragment"
@@ -41,4 +48,16 @@
             app:exitAnim="@android:anim/fade_out"
             app:destination="@id/navigation_login_fragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_recovery_fragment"
+        android:name="com.ar.enbaldeapp.ui.recover.RecoverPasswordFragment"
+        android:label="RecoverPasswordFragment">
+        <action
+            android:id="@+id/action_recoverFragment_to_loginFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:destination="@+id/navigation_login_fragment" />
+    </fragment>
+
 </navigation>

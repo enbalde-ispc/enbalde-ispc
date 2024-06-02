@@ -63,13 +63,16 @@ public class LoginFragment extends Fragment {
         final ProgressBar loadingProgressBar = binding.loading;
 
         binding.loginRegisterTextView.setOnClickListener(v -> {
-            if (requireActivity() instanceof MainActivity)
-            {
+            if (requireActivity() instanceof MainActivity) {
                 Navigation.findNavController(getView()).navigate(R.id.action_loginFragment_to_registrationFragment);
                 Utilities.changeBottomMenuToRegistration(getView());
             }
-            else {
+        });
 
+        binding.loginRecoverTextView.setOnClickListener(v -> {
+            if (requireActivity() instanceof MainActivity) {
+                Navigation.findNavController(getView()).navigate(R.id.action_loginFragment_to_recoverFragment);
+                Utilities.changeBottomMenuToRecover(getView());
             }
         });
 
@@ -129,8 +132,7 @@ public class LoginFragment extends Fragment {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    loginViewModel.login(usernameEditText.getText().toString(),
-                            passwordEditText.getText().toString());
+                    loginViewModel.login(usernameEditText.getText().toString(), passwordEditText.getText().toString(), getContext());
                 }
                 return false;
             }
@@ -140,8 +142,7 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
+                loginViewModel.login(usernameEditText.getText().toString(), passwordEditText.getText().toString(), getContext());
             }
         });
     }

@@ -8,4 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#364FF4</color>
+
+    <color name="red">#C93D49</color>
+    <color name="disabled_red">#F5AAB1</color>
+    <color name="green">#35BB96</color>
+    <color name="grey">#F5F5F8</color>
+    <color name="dark_grey">#EAE7E7</color>
+    <color name="olive_green">#A2B38B</color>
+
+    <color name="bg_catalogo">#A7D6FF</color>
 </resources>
