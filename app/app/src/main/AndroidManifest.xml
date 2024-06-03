@@ -17,16 +17,19 @@
         android:theme="@style/Theme.Enbalde"
         tools:targetApi="31">
         <activity
+            android:name=".ui.contact.ContactActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.payment.PaymentActivity"
             android:exported="false" />
         <activity
             android:name=".ui.details.ProductDetailActivity"
-            android:parentActivityName=".MainActivity"
-            android:launchMode="singleTop"
             android:excludeFromRecents="true"
-            android:windowSoftInputMode="adjustPan"
+            android:exported="false"
+            android:launchMode="singleTop"
             android:noHistory="true"
-            android:exported="false">
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
@@ -34,9 +37,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan"
+            android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:label="@string/app_name">
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

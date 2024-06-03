@@ -36,6 +36,9 @@ import java.util.function.Consumer;
 public class ApiServices implements IApiServices {
     // 10.0.2.2 es la ip de la maquina local corriendo el emulator de Android
     private static String ServerUrl = "http://10.0.2.2:8000";
+    private static final String INVALID_TOKEN = "El token es inválido";
+    private static final String INVALID_TITLE = "El título es inválido";
+    private static final String INVALID_MESSAGE = "El mensaje es inválido";
 
     private final Callable<IHttpUrlConnectionWrapper> connectionFactory;
 
@@ -216,8 +219,6 @@ public class ApiServices implements IApiServices {
         }
     }
 
-    public static final String INVALID_TOKEN = "El token es inválido";
-
     public void resetPassword(String accessToken, String newPassword, Consumer<String> onSuccess, Consumer<ApiError> onFailure) {
         if (accessToken == null || accessToken.trim().isEmpty()) {
             onFailure.accept(new ApiError(INVALID_TOKEN));
@@ -370,6 +371,45 @@ public class ApiServices implements IApiServices {
     }
 
     @Override
+    public void contact(String name, String email, String title, String message, Runnable onSuccess, Consumer<ApiError> onFailure) {
+
+        if (name == null || name.trim().isEmpty()) {
+            onFailure.accept(new ApiError(User.INVALID_FIRST_NAME));
+            return;
+        }
+
+        if (email == null || email.trim().isEmpty()) {
+            onFailure.accept(new ApiError(User.INVALID_EMAIL));
+            return;
+        }
+
+        if (title == null || title.trim().isEmpty()) {
+            onFailure.accept(new ApiError(INVALID_TITLE));
+            return;
+        }
+
+        if (message == null || message.trim().isEmpty()) {
+            onFailure.accept(new ApiError(INVALID_MESSAGE));
+            return;
+        }
+
+        ApiRequest request = new ApiRequest.Builder()
+                .addContentDisposition("name", name)
+                .addContentDisposition("email", email)
+                .addContentDisposition("reason", title)
+                .addContentDisposition("message", message)
+                .buildAsUrlEncodedData();
+
+        IServerConnector<Void> connector = getContactFrom(getUrl() + "/api/contacto/", request);
+        if (connector.connect()) {
+            onSuccess.run();
+        }
+        else {
+            onFailure.accept(connector.getError());
+        }
+    }
+
+    @Override
     public void checkout(String accessToken, Cart cart, ShippingMethod shippingMethod, PaymentType paymentType, String transaction, Consumer<Sale> onSuccess, Consumer<ApiError> onFailure) {
         if (onSuccess == null) throw new RuntimeException("El callback por éxito es inválido");
         if (onFailure == null) throw new RuntimeException("El callback por fallo es inválido");
@@ -441,5 +481,9 @@ public class ApiServices implements IApiServices {
 
     private IServerConnector<Long> getNewCartFrom(String url, ApiRequest request, String accessToken) {
         return new ServerConnector<>(url, new AuthenticatedPostFormDataRequester<>(request, new ApiResponseWrapper(), accessToken), this.connectionFactory);
+    }
+
+    private IServerConnector<Void> getContactFrom(String url, ApiRequest request) {
+        return new ServerConnector<>(url, new PostFormDataRequester<>(request, new ApiResponseWrapper()), this.connectionFactory);
     }
 }

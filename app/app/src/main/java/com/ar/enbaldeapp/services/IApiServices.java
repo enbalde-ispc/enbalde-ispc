@@ -27,4 +27,5 @@ public interface IApiServices {
     void getShippingMethods(String accessToken, Consumer<List<ShippingMethod>> onSuccess, Consumer<ApiError> onFailure);
     void checkout(String accessToken, Cart cart, ShippingMethod shippingMethod, PaymentType paymentType, String transaction, Consumer<Sale> onSuccess, Consumer<ApiError> onFailure);
     void replaceCart(String accessToken, User user, Consumer<Long> onSuccess, Consumer<ApiError> onFailure);
+    void contact(String name, String email, String title, String message, Runnable onSuccess, Consumer<ApiError> onFailure);
 }

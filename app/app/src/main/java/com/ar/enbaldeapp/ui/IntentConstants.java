@@ -15,4 +15,5 @@ public class IntentConstants {
     public static final String ACCESS_TOKEN_FOR_PAYMENT = "access-token-for-payment";
     public static final String CURRENT_CART_FOR_PAYMENT  = "current-cart-for-payment";
     public static final String PAYMENT_MESSAGE_FOR_CART = "payment-message-for-cart";
+    public static final String CONTACT_MESSAGE_FOR_HOME = "contact-message-for-home";
 }

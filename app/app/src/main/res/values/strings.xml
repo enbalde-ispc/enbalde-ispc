@@ -75,6 +75,23 @@
     <string name="recover_password_hint">Enter your new password</string>
     <string name="recover_email_hint">Enter your email address</string>
     <string name="recovery_token_hint">Enter your recovery token</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone number</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password2">New Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="last_name_hint">Enter your last name</string>
+    <string name="old_password_hint">Enter your old password</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="first_name_hint">Enter your first name</string>
+    <string name="phone_number_hint">Enter your phone number</string>
+    <string name="address_hint">Enter your address</string>
+    <string name="username_hint">Enter your username</string>
+    <string name="repeat_password_hint">Enter your password again</string>
     <string name="content_catalogue">No data available</string>
     <string name="background">Imagen de fondo</string>
 
