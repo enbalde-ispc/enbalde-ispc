@@ -377,7 +377,7 @@ public class ApiServices implements IApiServices {
         ApiRequest request = new ApiRequest.Builder()
                 .addContentDisposition("carrito", cart.getId())
                 .addContentDisposition("envio", shippingMethod.getId())
-                .addContentDisposition("pago", paymentType.ordinal())
+                .addContentDisposition("pago", paymentType.getValue())
                 .addContentDisposition("transaccion", transaction)
                 .buildAsUrlEncodedData();
 

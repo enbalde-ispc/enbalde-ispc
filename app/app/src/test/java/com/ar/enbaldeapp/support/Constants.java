@@ -71,7 +71,7 @@ public class Constants {
     public static final List<Selection> SALE_SELECTIONS = new ArrayList<>(Arrays.asList(new Selection(SELECTION_ID, SELECTION_PRODUCT, SELECTION_QUANTITY, SELECTION_OFFERS, SELECTION_DISCOUNT, SELECTION_TOTAL)));
     public static final double SALE_TOTAL = 10000;
     public static final ShippingMethod SALE_SHIPPING = new ShippingMethod(SHIPPING_METHOD_ID, SHIPPING_METHOD_NAME, SHIPPING_METHOD_COST);
-    public static final PaymentType SALE_PAYMENT_TYPE = PaymentType.CASH;
+    public static final PaymentType SALE_PAYMENT_TYPE = PaymentType.CASH_TO_PAY;
     public static final String SALE_TRANSACTION = "c80c9ae7-95ed-49b7-a629-f57746f6a8aa";
 
     public static final String REGISTRATION_OK_JSON = "{\"mensaje\": \"Usuario registrado exitosamente\", \"data\": {\"nombre\": \"Juan\", \"apellido\": \"Perez\", \"usuario\": \"juan8\", \"direccion\": \"123 Main St\", \"telefono\": \"11112222\", \"email\": \"juan.perez@gmail.com\", \"tipo\": 2, \"observaciones\": \"\"}, \"status\": 201}";

@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:scaleType="fitXY"
         android:src="@drawable/bg_catalogo"
+        android:contentDescription="@string/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +25,7 @@
         android:layout_height="96dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/logo_text"
+        android:contentDescription="@string/content_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/catalogueBackgroundImageView" />
@@ -61,5 +63,5 @@
         android:textSize="24sp"
         android:gravity="center"
         android:visibility="gone"
-        android:text="No data available" />
+        android:text="@string/content_catalogue" />
 </androidx.constraintlayout.widget.ConstraintLayout>

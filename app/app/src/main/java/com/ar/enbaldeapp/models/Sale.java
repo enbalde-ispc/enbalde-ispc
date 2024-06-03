@@ -58,7 +58,8 @@ public class Sale {
             case 2: return "Efectivo pagado";
             case 3: return "Enbalde Pago";
             case 4: return "Stripe Pago a pagar";
-            default: return "Stripe pagado";
+            case 5: return "Stripe pagado";
+            default: return "Desconocido";
         }
     }
 }

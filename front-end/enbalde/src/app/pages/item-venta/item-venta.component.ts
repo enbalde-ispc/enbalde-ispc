@@ -49,7 +49,15 @@ export class ItemVentaComponent {
     return this.funcionesService.visualizarFecha(fecha);
   }
 
-  obtenerTipoPago = (tipoPago: TipoPago) => this.tipoPagos.filter(t => t.pago == tipoPago)[0].nombre;
+  obtenerTipoPago(tipoPago: TipoPago): string {
+    var pagos = this.tipoPagos.filter(t => t.pago == tipoPago);
+    if (pagos.length > 0) {
+      return pagos[0].nombre;
+    }
+    else {
+      return "Desconocido";
+    }
+  }
 
   cancelar() {
     this.editando = undefined;

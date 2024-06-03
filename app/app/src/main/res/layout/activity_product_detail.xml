@@ -12,12 +12,11 @@
         android:layout_height="match_parent"
         android:scaleType="fitXY"
         android:src="@drawable/bg_catalogo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/fondo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewDetail"
@@ -28,7 +27,9 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_icecream_24" />
+        app:srcCompat="@drawable/baseline_icecream_24"
+        android:contentDescription="@string/icecream"
+        />
 
     <TextView
         android:id="@+id/textViewDetailName"
@@ -38,7 +39,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:textSize="45sp"
-        android:text="Loading..."
+        android:text="@string/loading2"
         android:fontFamily="@font/poetsen_one_regular"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +54,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
-        android:text="Loading..."
+        android:text="@string/loading1"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,9 +69,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@color/red"
-        android:text="-"
+        android:text="@string/minus"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailDescription" />
 
@@ -81,9 +82,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@color/blue"
-        android:text="+"
+        android:text="@string/plus"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailDescription" />
 
@@ -107,7 +108,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:hint="1"
+        android:hint="@string/cantidad"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/buttonDetailAdd"
         app:layout_constraintHorizontal_bias="0.103"
@@ -116,15 +117,18 @@
 
     <TextView
         android:id="@+id/productDetailSubTotalTextView"
-        android:layout_width="191dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="$200"
+        android:text="@string/money"
         android:textColor="@color/black"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/catalogueBackgroundImageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNumberDetailAmount" />
+        app:layout_constraintTop_toBottomOf="@+id/editNumberDetailAmount"
+        app:layout_constraintVertical_bias="0.161" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

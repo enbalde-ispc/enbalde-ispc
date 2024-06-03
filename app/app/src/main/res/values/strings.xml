@@ -55,6 +55,14 @@
     <string name="save">Guardar</string>
     <string name="content_logo">Logo</string>
     <string name="forgot_password2">Olvidé mi clave</string>
+    <string name="money">$200</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="loading1">cargando</string>
+    <string name="loading2">Cargando</string>
+    <string name="cantidad">1</string>
+    <string name="icecream">helado</string>
+    <string name="fondo">fondo</string>
     <string name="new_password">Nueva Clave</string>
     <string name="send_me_a_token">Send me a token</string>
     <string name="token_and_new_password">"A continuación ingrese el token que recibió por correo y la nueva clave que desea usar."</string>
@@ -67,8 +75,7 @@
     <string name="recover_password_hint">Enter your new password</string>
     <string name="recover_email_hint">Enter your email address</string>
     <string name="recovery_token_hint">Enter your recovery token</string>
-
-
-
+    <string name="content_catalogue">No data available</string>
+    <string name="background">Imagen de fondo</string>
 
 </resources>

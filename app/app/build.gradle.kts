@@ -35,6 +35,7 @@ android {
 }
 
 dependencies {
+    implementation("com.stripe:stripe-android:20.44.1")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.squareup.picasso:picasso:2.5.2")
     implementation("androidx.appcompat:appcompat:1.6.1")

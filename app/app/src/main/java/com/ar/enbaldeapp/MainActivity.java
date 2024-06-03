@@ -13,6 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.ar.enbaldeapp.databinding.ActivityMainBinding;
+import com.stripe.android.Stripe;
 
 public class MainActivity extends AppCompatActivity {
 
