@@ -88,8 +88,6 @@ class UiTests(LiveServerTestCase):
             time.sleep(1)
             price.click()
             time.sleep(1)
-            cost.click()
-            time.sleep(1)
 
             ddown_menu = driver.find_element(By.XPATH, '//*[@id="navegacion"]/ul/li[3]/a')
             driver.execute_script("arguments[0].click();", ddown_menu)
@@ -144,4 +142,5 @@ class UiTests(LiveServerTestCase):
             time.sleep(3)
         finally:
             driver.quit()
+
  """

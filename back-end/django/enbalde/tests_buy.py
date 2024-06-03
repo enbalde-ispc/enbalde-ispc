@@ -101,4 +101,5 @@ class UiTests(LiveServerTestCase):
             time.sleep(2)
         finally:
             driver.quit()
+
  """
