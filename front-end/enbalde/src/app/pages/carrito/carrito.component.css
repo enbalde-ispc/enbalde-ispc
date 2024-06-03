@@ -39,3 +39,67 @@
 button {
   color: aliceblue;
 }
+
+.title{
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1);
+}
+
+.pay{
+  color: #D8182B;
+  padding: 2%;
+  width: 25rem;
+  margin: auto;
+  background-color: rgb(231, 231, 219);
+}
+
+.send{
+  text-align: center;
+  background-color: rgb(221, 221, 221);
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2% 0%;
+  font-size: 1.2rem;
+  color: green;
+}
+
+.opcion{
+  margin: auto;
+  background-color: rgb(221, 221, 221);
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2% 0%;
+}
+
+.check{
+  padding: 0 5%;
+}
+
+.title_opcion{
+  text-align: center;
+}
+
+.pay-bot{
+  margin: 3% 0%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#envio{
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.carrito_vacio{
+  text-align: center;
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1);
+}

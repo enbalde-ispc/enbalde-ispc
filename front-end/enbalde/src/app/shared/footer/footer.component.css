@@ -1,6 +1,6 @@
 footer {
-    background-color:  #160f75;
-    color:#81b4db ;
+    background: #81b4db !important;
+    color: white;
 }
 
 .container {
@@ -10,3 +10,15 @@ footer {
 h5 {
     font-size: 18px;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.go_back_up{
+    color: rgba(245,245,220,1) !important;
+    background-color: #EC5564;
+}
+

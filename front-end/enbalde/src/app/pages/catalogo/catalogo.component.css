@@ -29,8 +29,19 @@
   display: none;
 }
 
+.text_cargando{
+  text-align: center;
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1) !important;
+}
+
 #tittle {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1) !important;
 }
 
 /* Tablet */

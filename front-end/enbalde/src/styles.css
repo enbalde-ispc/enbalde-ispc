@@ -1,6 +1,8 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
 body {
-  background-color: aliceblue;
+  background-color: #EC5564;
   font-weight: bold;
   font-family:'Times New Roman', Times, serif !important;
 }
@@ -47,4 +49,10 @@ body {
     font-size: small;
     padding: 2rem;
   }
+}
+
+.dropdown-menu{
+  text-align: center;
+  /* background-color: rgba(245, 245, 220, 1); */
+  background: #81b4db !important;
 }

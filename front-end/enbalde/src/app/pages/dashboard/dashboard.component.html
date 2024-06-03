@@ -1,27 +1,31 @@
 <div class="col-md-12 mt-auto pb-4">
   <div class="mt-5 p-2">
     <div class="text-center">
-      <h1 class="text-black">ARTÍCULOS EXISTENTES</h1>
+      <h1 class="title">ARTÍCULOS EXISTENTES</h1>
     </div>
   </div>
 </div>
 
 <div class="container">
-  <ng-container *ngIf="productos.length > 0">
-    <div class="row table-header-color">
-      <div class="col-3">Titulo</div>
-      <div class="col-2 col-lg-1">Precio</div>
-      <div class="col-2 col-lg-1">Cantidad</div>
-      <div class="col">Descripcion</div>
-    </div>
-    <app-item-producto *ngFor="let producto of productos; let odd = odd" [odd]=odd (refrescar)="refrescar($event)" [producto]="producto" [tipoProductos]="tipoProductos"></app-item-producto>
-  </ng-container>
+  <div class="col-10 mx-auto table">
+    <ng-container *ngIf="productos.length > 0">
+      <div class="row table-header-color">
+        <div class="col-3">Titulo</div>
+        <div class="col-2 col-lg-1">Precio</div>
+        <div class="col-2 col-lg-1">Cantidad</div>
+        <div class="col">Descripcion</div>
+      </div>
+      <app-item-producto *ngFor="let producto of productos; let odd = odd" [odd]=odd (refrescar)="refrescar($event)"
+        [producto]="producto" [tipoProductos]="tipoProductos"></app-item-producto>
+    </ng-container>
+  </div>
 
   <ng-container *ngIf="productos.length == 0">
     No hay artículos para mostrar.
   </ng-container>
-
-  <h3>Agregar</h3>
+</div>
+<div class="container agregar">
+  <h3 class="agregar_title">Agregar</h3>
   <div class="col-6">
     <form [formGroup]="crearProductoForm" class="my-form" enctype="multipart/form-data">
       <div>
@@ -29,7 +33,8 @@
         <input id="nombre" name="nombre" type="text" formControlName="nombre">
         <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)" class="text-danger">
           <div *ngIf="nombre?.errors?.['required']">Se requiere un nombre de producto.</div>
-          <div *ngIf="nombre?.errors?.['maxlength']">La longitud máxima es de {{constantes.MAXIMO_NOMBRE_ARTICULO}} caracteres.</div>
+          <div *ngIf="nombre?.errors?.['maxlength']">La longitud máxima es de {{constantes.MAXIMO_NOMBRE_ARTICULO}}
+            caracteres.</div>
         </div>
       </div>
       <div>
@@ -43,7 +48,8 @@
         <label for="tipo">Tipo: </label>
         <select id="tipo" name="tipo" formControlName="tipo">
           <option value="0" id="id-0" selected>Seleccione una opción...</option>
-          <option *ngFor="let tipoProducto of tipoProductos" [value]=tipoProducto.id [id]=crearId(tipoProducto.id) >{{tipoProducto.nombre}}</option>
+          <option *ngFor="let tipoProducto of tipoProductos" [value]=tipoProducto.id [id]=crearId(tipoProducto.id)>
+            {{tipoProducto.nombre}}</option>
         </select>
         <div *ngIf="tipo?.invalid && (tipo?.dirty || tipo?.touched)" class="text-danger">
           <div *ngIf="tipo?.errors?.['required']">Se requiere seleccionar un tipo de producto.</div>
@@ -79,13 +85,14 @@
         <input id="imagen" name="imagen" type="file" accept="image/*" (change)="onFileChange($event)"><br>
       </div>
       <div class="btn-right">
-        <button type="submit" class="col btn btn-primary" [disabled]="!crearProductoForm.valid" (click)="crear(crearProductoForm.value)">Crear artículo</button>
+        <button type="submit" class="col btn btn-primary" [disabled]="!crearProductoForm.valid"
+          (click)="crear(crearProductoForm.value)">Crear artículo</button>
       </div>
     </form>
   </div>
-  <ng-container *ngIf="resultado">
-    <div class="row">
-      <app-resultado-api [resultado]="resultado"></app-resultado-api>
-    </div>
-  </ng-container>
 </div>
+<ng-container *ngIf="resultado">
+  <div class="row">
+    <app-resultado-api [resultado]="resultado"></app-resultado-api>
+  </div>
+</ng-container>

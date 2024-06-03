@@ -17,3 +17,57 @@ input[type=text], input[type=number], input[type=file], #tipo {
 .ng-invalid:not(form).ng-touched {
   border-bottom: 5px solid #a94442;
 }
+
+.title{
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1);
+}
+
+.agregar {
+  min-width: 400px;
+  max-width: 60%;
+  margin: 2% auto;
+  background-color: rgba(245, 245, 220, 1);
+  border-radius: 15px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #D8182B;
+}
+
+.agregar_title{
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: #D8182B;
+  margin-bottom: 5%;
+  font-size: 2rem;
+}
+
+.table{
+  min-width: 400px;
+  max-width: 90%;
+}
+
+.btn{
+  text-transform: uppercase;
+  border: none;
+  font-size: 0.875rem;
+  color: rgba(245,245,220,1);
+  font-weight: bold;
+  background-color: #EC5564;;
+  width: 70%;
+  display: block;
+  margin-top: 1em;
+  margin-left: 15%;
+  padding: 0.875rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(195, 49, 64, 0.72) ;
+}

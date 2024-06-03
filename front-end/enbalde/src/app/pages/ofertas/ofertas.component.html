@@ -1,12 +1,12 @@
 <div class="col-md-12 mt-auto pb-4">
     <div class="mt-5 p-2">
         <div class="text-center">
-            <h1 class="text-black">OFERTAS EXISTENTES</h1>
+            <h1 class="title">OFERTAS EXISTENTES</h1>
         </div>
     </div>
 </div>
 
-<div class="container">
+<div class="container body_opt">
   <ng-container *ngIf="ofertas.length > 0">
     <div class="row table-header-color">
       <div class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7">Nombre</div>
@@ -16,9 +16,9 @@
     <app-item-oferta *ngFor="let oferta of ofertas; let odd = odd" [odd]=odd [oferta]="oferta" [productos]="productos" (refrescar)="refrescar()"></app-item-oferta>
   </ng-container>
   <ng-container *ngIf="ofertas.length == 0">
-    <p>No hay ofertas para mostrar.</p>
+    <p class="sinofertas">No hay ofertas para mostrar.</p>
   </ng-container>
-  <div class="row">
+  <div class="row body_mid">
     <h3>Agregar</h3>
     <form [formGroup]="crearOfertaForm" (ngSubmit)="crear(crearOfertaForm.value)">
       <input class="col-5 col-sm-5 col-md-5 col-lg-6 col-xl-7" formControlName="nombre" id="nombre" name="nombre" type="text" placeholder="Ingresar nombre de oferta">

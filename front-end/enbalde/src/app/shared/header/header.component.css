@@ -8,17 +8,26 @@ header {
 }
 
 .nav-link {
-  color: #160f75 !important;
+  transition: .1s;
+  border-radius: 10px 0px;
+  color: #850F1B;
+}
+
+.nav-link:hover {
+  transition: .5s;
+  color: #f5f5dc !important;
+  background-color: #EC5564;
+  border-radius: 15px;
 }
 
 .nav-item {
-  font-size: large;
+  text-align: center;
+  font-size: 1.3rem;
   font-weight: bold;
   margin: 0.5em;
 }
 
-.nav-link:hover {
-  transition: .1s;
-  color: #e9e9eb !important;
-  background-color: #160f75;
+.form-control{
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+  #9e9ea1;
 }

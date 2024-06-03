@@ -9,3 +9,29 @@ html, body {
 .odd {
   background: rgb(225, 225, 225);
 }
+
+.text-buy{
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1);
+}
+
+.table-header{
+  font-size: 1.3rem;
+  color: #850F1B;
+}
+
+.table-body{
+  padding: 2%;
+  background-color: #e9e9eb;
+  color: rgb(17, 100, 17);
+}
+
+.sin_compras{
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1);
+}
+

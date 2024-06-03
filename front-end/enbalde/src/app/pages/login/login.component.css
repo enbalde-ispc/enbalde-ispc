@@ -3,17 +3,17 @@ html, body {
 }
 
 .seccion-form {
-  min-width: 300px;
+  min-width: 400px;
   max-width: 60%;
   margin: 0px auto;
-  background: rgba(255, 255, 255, 0.15);
   padding: 2rem 3rem;
   margin: auto;
   border-radius: 0.5rem;
   background-color: #b1d0e7;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
-  color: black;
+  background-color: rgba(245,245,220,1);
+  color: #D8182B;
   margin-top: 0.5rem;
+  font-size: 1.3rem;
 }
 
 .seccion-form input {
@@ -33,21 +33,20 @@ html, body {
   text-transform: uppercase;
   border: none;
   font-size: 0.875rem;
-  color: #ffffff;
+  color: rgba(245,245,220,1);
   font-weight: bold;
-  background-color: #160f75;
+  background-color: #EC5564;;
   width: 70%;
   display: block;
   margin-top: 1em;
   margin-left: 15%;
   padding: 0.875rem;
   border-radius: 0.2rem;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #2e2977;
+  background-color: rgba(195, 49, 64, 0.72) ;
 }
 
 p {
@@ -60,4 +59,24 @@ p {
 
 .ng-invalid:not(form).ng-touched {
   border-bottom: 5px solid #a94442;
+}
+
+.title{
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1);
+}
+
+a{
+  color: #D8182B;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+a:hover{
+  border-radius: 15px;
+  padding: 1.2rem;
+  background-color: #D8182B;
+  color: rgba(245,245,220,1);
 }

@@ -1,29 +1,29 @@
 <div class="col-md-12 mt-auto pb-4">
     <div class="mt-5 p-2">
         <div class="text-center">
-            <h1 class="text-black">MIS COMPRAS</h1>
+            <h1 class="text-buy">MIS COMPRAS</h1>
         </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-10 mx-auto">
         <ng-container *ngIf="compras.length > 0">
-          <div class="row table-header-color">
+          <div class="row table-header-color table-header">
             <div class="col-3 col-md-3">Fecha</div>
             <div class="col-4 col-md-6">Artículos</div>
             <div class="col-3 col-md-2">Tipo de Pago</div>
             <div class="col-2 col-md-1">Valor</div>
           </div>
-          <div class="row" *ngFor="let compra of compras; let odd = odd" [class.odd]=odd>
+          <div class="row table-body" *ngFor="let compra of compras; let odd = odd" [class.odd]=odd>
             <div class="col-3 col-md-3">{{obtenerFechaFormateada(compra)}}</div>
             <div class="col-4 col-md-6">{{obtenerArticulos(compra)}}</div>
             <div class="col-3 col-md-2">{{obtenerTipoDePago(compra)}}</div>
             <div class="col-2 col-md-1">{{compra.total}}</div>
           </div>
         </ng-container>
-        <ng-container *ngIf="compras.length == 0">No hay compras para mostrar.</ng-container>
+        <ng-container class="sin_compras" *ngIf="compras.length == 0">No hay compras para mostrar.</ng-container>
       </div>
     </div>
 </div>

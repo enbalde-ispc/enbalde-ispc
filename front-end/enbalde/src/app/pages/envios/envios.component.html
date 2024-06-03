@@ -1,14 +1,14 @@
 <div class="col-md-12 mt-auto pb-4">
     <div class="mt-5 p-2">
         <div class="text-center">
-            <h1 class="text-black">TIPOS DE ENVÍOS EXISTENTES</h1>
+            <h1 class="title">TIPOS DE ENVÍOS EXISTENTES</h1>
         </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col table">
         <ng-container *ngIf="envios.length > 0">
           <div class="row table-header-color">
             <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">Nombre</div>
@@ -19,8 +19,8 @@
         <ng-container *ngIf="envios.length == 0">
           <p>No hay envíos para mostrar.</p>
         </ng-container>
-        <div class="row">
-          <h3>Agregar</h3>
+        <div class="row mt-5 agregar">
+          <h3 class="agregar_title">Agregar</h3>
           <form [formGroup]="crearEnvioForm" (ngSubmit)="crear(crearEnvioForm.value)">
             <input class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7" formControlName="nombre" id="nombre" name="nombre" type="text" placeholder="Ingresar nombre de envío">
             <input class="col-3 col-sm-3 col-md-3 col-lg-4 col-xl-4" formControlName="monto" id="monto" name="monto" type="number">

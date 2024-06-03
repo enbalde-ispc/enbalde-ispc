@@ -1,0 +1,12 @@
+.title {
+    font-size: 3rem;
+    font-style: italic;
+    font-family: "Poetsen One", sans-serif;
+    color: rgba(245, 245, 220, 1);
+}
+
+.table {
+    margin: auto;
+    min-width: 400px;
+    max-width: 90%;
+}

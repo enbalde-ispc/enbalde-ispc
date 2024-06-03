@@ -5,3 +5,30 @@
 .ng-invalid:not(form).ng-touched {
     border-bottom: 5px solid #a94442;
 }
+
+.title{
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1);
+}
+
+.body_opt{
+  background-color: rgba(245,245,220,1);
+  padding: 2%;
+  border-radius: 15px;
+  color: #D8182B;
+  text-align: center;
+}
+
+.sinofertas{
+  font-size: 1.7rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+}
+
+.body_mid{
+  display: flex;
+  margin: auto;
+  text-align: center;
+}

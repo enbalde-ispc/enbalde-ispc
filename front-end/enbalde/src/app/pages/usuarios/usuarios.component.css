@@ -17,3 +17,50 @@ input[type=text], input[type=number], input[type=password], #tipoUsuario {
 .ng-invalid:not(form).ng-touched {
   border-bottom: 5px solid #a94442;
 }
+
+.table{
+  margin: 2% auto;
+  min-width: 300px;
+  max-width: 90%;
+}
+
+.title {
+  color: rgba(245, 245, 220, 1) !important;
+  font-style: italic;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Poetsen One", sans-serif;
+}
+
+.agregar{
+  min-width: 300px;
+  max-width: 60%;
+  margin: 0px auto;
+  padding: 2rem 3rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  background-color: rgba(245,245,220,1);
+  color: #D8182B;
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  font-size: 0.875rem;
+  color: rgba(245,245,220,1);
+  font-weight: bold;
+  background-color: #EC5564;;
+  width: 70%;
+  display: block;
+  margin-top: 1em;
+  margin-left: 15%;
+  padding: 0.875rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(195, 49, 64, 0.72) ;
+}

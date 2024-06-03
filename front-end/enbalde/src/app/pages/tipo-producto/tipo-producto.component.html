@@ -1,24 +1,26 @@
 <div class="col-md-12 mt-auto pb-4">
   <div class="mt-5 p-2">
     <div class="text-center">
-      <h1 class="text-black">TIPOS DE ARTÍCULOS EXISTENTES</h1>
+      <h1 class="title">TIPOS DE ARTÍCULOS EXISTENTES</h1>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <ng-container *ngIf="tipoProductos.length > 0">
-    <div class="row table-header-color">
-      <div class="col-10 col-lg-6 col-md-6 col-xl-6">Nombre</div>
-    </div>
-    <app-item-tipo-producto *ngFor="let tipoProducto of tipoProductos; let odd = odd" [odd]="odd" (refrescar)="refrescar($event)" [tipoProducto]="tipoProducto"></app-item-tipo-producto>
-  </ng-container>
+<div class="container table">
+  <div class="col-10 mx-auto">
+    <ng-container *ngIf="tipoProductos.length > 0">
+      <div class="row table-header-color">
+        <div class="col-10 col-lg-6 col-md-6 col-xl-6">Nombre</div>
+      </div>
+      <app-item-tipo-producto *ngFor="let tipoProducto of tipoProductos; let odd = odd" [odd]="odd" (refrescar)="refrescar($event)" [tipoProducto]="tipoProducto"></app-item-tipo-producto>
+    </ng-container>
+  </div>
   <ng-container *ngIf="tipoProductos.length == 0">
     <p>No hay tipos de artículos para mostrar.</p>
   </ng-container>
 
-  <div class="row">
-    <h3>Agregar</h3>
+  <div class="row mt-5 agregar">
+    <h3 class="agregar_title">Agregar</h3>
     <form [formGroup]="crearTipoProductoForm" (ngSubmit)="crear(crearTipoProductoForm.value)">
       <input class="col-7 col-sm-8 col-md-9 col-lg-9 col-xl-10" formControlName="nombre" id="nombre" name="nombre" type="text" placeholder="Ingresar el nombre del tipo">
       <button type="submit" class="col btn btn-primary" [disabled]="!crearTipoProductoForm.valid"><i class="bi bi-save"></i></button>

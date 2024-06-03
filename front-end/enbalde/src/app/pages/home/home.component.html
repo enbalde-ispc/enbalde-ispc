@@ -23,12 +23,12 @@
 <!-- intro -->
 
 <section class="w-50 mx-auto text-center pt-5 animacion animate__animated animate__fadeIn" id="section">
-  <h1 class="p-3 fs-2 border-styled" id="tittle">{{titulo}}</h1>
-  <p class="p-3 fs-4">{{descripcion}}</p>
+  <h1 class="title" id="tittle">{{titulo}}</h1>
+  <p class="description_paraghrap">{{descripcion}}</p>
 </section>
 
 <!-- CARDS -->
-<div id="containerCards" class="container mt-2 pt-3 pb-3 animacion animate__animated animate__fadeIn">
+<div id="containerCards" class="container mt-2 pt-3 pb-3 animacion animate__animated animate__fadeIn news">
   <h2 class="titleCardContainer">¿QUÉ HAY DE NUEVO?</h2>
       <div class="row">
         <div class="col-md-6 col-sm-12  col-lg-3 text-center pb-3" id="card_r">
@@ -64,15 +64,15 @@
 
     <div id="containerCards" class="container mt-2 pt-3 pb-3 animacion animate__animated animate__fadeIn">
       <div class="col-md-6 col-sm-6 text-center mx-auto" >
-        <div class="card card-block" id="a">
+        <div class="card card-block news">
         <h4 class="titleCardContainer text-right ">¡¡GANADORES DEL SORTEO DE 1KG DE HELADO!!</h4>
 
             <ng-container *ngIf="data && data.length > 0 && data.length">
-              <div *ngFor="let user of data">
-                <h6>
+              <div *ngFor="let user of data" class="user_card">
+                <img [src]="user.picture.large" alt="Foto de perfil" class="profile-image">
+                <h6 class="user_name">
                   {{ user.name.first }} {{ user.name.last }}
                 </h6>
-                <img [src]="user.picture.large" alt="Foto de perfil" class="profile-image">
               </div>
             </ng-container>
             <li *ngIf="data && data.length === 0">

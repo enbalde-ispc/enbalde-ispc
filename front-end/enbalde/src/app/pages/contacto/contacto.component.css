@@ -6,8 +6,7 @@ input[type=text], input[type=email], select, textarea {
   border-radius: 0.2px;
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
-  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
-  #9e9ea1;
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px #9e9ea1;
   resize: vertical;
   color: #212121;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
@@ -23,8 +22,8 @@ option:not(first-child) {
 
 label {
   font-weight: 700;
-  font-size: 1rem;
-  color: black;
+  font-size: 1.5rem;
+  color: #D8182B;
 }
 
 .section-title {
@@ -37,17 +36,13 @@ label {
   font-size: 2rem;
 }
 
-.section-title p {
-  color: #616161;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
+
 
 .my-form {
-  margin: 0px auto;
+  width: 75%;
+  margin: 2% auto;
   padding: 2rem 3rem;
-  background-color: #b1d0e7;
-  box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+  background-color: rgba(245, 245, 220, 1);
   border-radius: 0.5rem;
   margin-top: 3px;
 }
@@ -81,19 +76,18 @@ small, #contador {
   font-size: 0.875rem;
   color: #ffffff;
   font-weight: bold;
-  background-color: #160f75;
-  width: 70%;
+  background-color: #EC5564;
+  width: 50%;
   display: block;
-  margin-top: 2em;
-  margin-left: 15%;
-  border-radius: .5rem;
-  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  margin: 5% auto 0;
+  border-radius: 15px;
   cursor: pointer;
   padding: 0.875rem 1rem;
 }
 
 .btn:hover {
-  background-color: #2e2977;
+  transition: 1s;
+  background-color: rgba(195, 49, 64, 0.72) ;
 }
 
 .ng-valid:not(form).ng-touched {
@@ -102,4 +96,19 @@ small, #contador {
 
 .ng-invalid:not(form).ng-touched {
   border-bottom: 5px solid #a94442;
+}
+
+.title_contact {
+  color: rgba(245, 245, 220, 1) !important;
+  font-style: italic;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Poetsen One", sans-serif;
+}
+
+.par_contact {
+  font-size: 1.7rem;
+  color: #f5f5dc;
+  margin-bottom: 2%;
+  font-family: "Poetsen One", sans-serif;
 }

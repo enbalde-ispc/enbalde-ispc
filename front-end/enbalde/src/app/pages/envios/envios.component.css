@@ -5,3 +5,36 @@
 .ng-invalid:not(form).ng-touched {
   border-bottom: 5px solid #a94442;
 }
+
+.table{
+  margin: auto;
+  min-width: 400px;
+  max-width: 90%;
+}
+
+.title{
+  font-size: 3rem;
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: rgba(245,245,220,1);
+}
+
+.agregar {
+  min-width: 400px;
+  max-width: 60%;
+  margin: 2% auto;
+  background-color: rgba(245, 245, 220, 1);
+  border-radius: 15px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #D8182B;
+}
+
+
+.agregar_title{
+  font-style: italic;
+  font-family: "Poetsen One", sans-serif;
+  color: #D8182B;
+}

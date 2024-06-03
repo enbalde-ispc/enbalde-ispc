@@ -22,7 +22,6 @@ finalizada la elección la página lo dirigirá a la sección carrito en donde p
 - Lucia Ailen Leonetti-GitHub: LuciaL152
 - Facundo Manuel Díaz-GitHub: facumd
 - Yuliana Paula Capdevila- GitHub: YuliCap
-- Lidio Guedez- GitHub: lidioguedez
 
 ## Modo de Uso
 
