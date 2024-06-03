@@ -199,7 +199,7 @@ class SeleccionTestCase(TestCase):
         self.assertEqual(2, sut.cantidad)
 
     def test_nombre_de_la_seleccion_es_el_articulo_dentro_del_carrito(self):
-        descripcion = f"{ARTICULO} dentro de carrito 1 de {NOMBRE}"
+        descripcion = f"{ARTICULO} dentro de carrito 5 de {NOMBRE}"
         articulo = crear_articulo()
         carrito = crear_carrito()
         sut = Seleccion.objects.create(cantidad=2, carrito=carrito, articulo=articulo)
