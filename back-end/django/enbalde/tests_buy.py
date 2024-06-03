@@ -1,4 +1,4 @@
-""" from selenium import webdriver
+from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -62,13 +62,12 @@ class UiTests(LiveServerTestCase):
 
             cart = driver.find_element(By.XPATH, '//*[@id="navegacion"]/ul/li[6]/a/img')
             driver.execute_script("arguments[0].click();", cart)
-            time.sleep(2)
+            time.sleep(5)
+
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
             stripe = driver.find_element(By.CLASS_NAME, 'stripe')
-            time.sleep(1)
-
-            wait = WebDriverWait(driver, timeout=2)
-            wait.until(lambda d : stripe.is_enabled())
+            time.sleep(3)
 
             stripe.click()
             time.sleep(5)
@@ -102,4 +101,3 @@ class UiTests(LiveServerTestCase):
             time.sleep(2)
         finally:
             driver.quit()
- """
